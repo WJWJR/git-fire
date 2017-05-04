@@ -22,6 +22,7 @@ class App extends Component {
     base.auth().onAuthStateChanged(user => {
       if (user) {
         this.getUserListsSeen()
+        this.getProjectListsSeen()
       }
     })
 
@@ -91,7 +92,7 @@ class App extends Component {
     asArray: true,
     then(data){
       console.log(data);
-      this.setState ({users:data})
+      this.setState ({projects:data})
     }
   });
   }
@@ -117,13 +118,24 @@ class App extends Component {
       console.log(this.state.users)
       return(
         <div>
-           {this.state.users.map((arr,index) => {
-             return(
-               <li key={index}>{arr}</li>
+          <div>
+             {this.state.users.map((arr,index) => {
+               return(
+                 <li key={index}>{arr}</li>
+              )}
             )}
-          )}
-        </div>
-        
+          </div>
+
+          <div>
+             {this.state.projects.map((project,index) => {
+               return(
+                 <li key={index}>{project.name}</li>
+              )}
+            )}
+          </div>
+      </div>
+
+
 
       )
 
