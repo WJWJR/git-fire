@@ -1,13 +1,12 @@
 
 var Rebase = require('re-base');
 var config = {
-  apiKey: "AIzaSyDsb-qOGQMBKTTAaR_qHMJlvgoQgSli70g",
-  authDomain: "friendlychat-7c70c.firebaseapp.com",
-  databaseURL: "https://friendlychat-7c70c.firebaseio.com",
-  projectId: "friendlychat-7c70c",
-  storageBucket: "friendlychat-7c70c.appspot.com",
-  messagingSenderId: "397611863059"
-};
-
+    apiKey: "AIzaSyB_ED9T_gEFhoaCvdaPnj7CTjcTcSeaNYo",
+    authDomain: "git-fire.firebaseapp.com",
+    databaseURL: "https://git-fire.firebaseio.com",
+    projectId: "git-fire",
+    storageBucket: "git-fire.appspot.com",
+    messagingSenderId: "954681694137"
+  };
   var base = Rebase.createClass(config);
   export default base;
